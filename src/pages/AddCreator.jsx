@@ -1,5 +1,6 @@
 // src/pages/AddCreator.jsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddCreator = ({ onAdd }) => {
     const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const AddCreator = ({ onAdd }) => {
         description: "",
         imageURL: ""
     });
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -38,11 +40,12 @@ const AddCreator = ({ onAdd }) => {
                     URL
                     <input
                         name="url"
-                        placeholder="URL"
+                        placeholder="https://www.youtube.com/@channelname"
                         required
                         value={formData.url}
                         onChange={handleChange}
                     />
+                    <p>Include the full URL (e.g., https://www.youtube.com/@channelname)</p>
                 </label>
 
                 <label>
@@ -58,17 +61,19 @@ const AddCreator = ({ onAdd }) => {
                 </label>
 
                 <label>
-                    Image URL
+                    Image URL (optional)
                     <input
                         name="imageURL"
                         placeholder="Image URL"
-                        required
                         value={formData.imageURL}
                         onChange={handleChange}
                     />
                 </label>
 
-                <button type="submit">Add Creator</button>
+                <div className="form-buttons">
+                    <button type="submit">Add Creator</button>
+                    <button type="button" onClick={() => navigate("/")}>Cancel</button>
+                </div>
             </form>
         </div>
     );
