@@ -31,7 +31,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://i.imgur.com/tGAeQcO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿<img src='https://i.imgur.com/6MSwsDA.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with Kap.
 
